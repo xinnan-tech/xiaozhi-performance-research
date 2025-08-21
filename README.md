@@ -23,7 +23,7 @@
 | 测试方法 | 测试地点 | 测试时间 | 宽带运营商 |
 |-----|-----|-----|-----|
 | [点击查看](/ASR/A10显卡推理报告.md) | 广东省广州市海珠区 | 2025年8月1日 16:48 | 中国联通 |
-| [点击查看](https://github.com/xinnan-tech/xiaozhi-esp32-server/blob/main/docs/performance_tester.md) | 广东省广州市海珠区 | 2025年8月21日 17:23 | 中国移动 |
+| [点击查看](https://github.com/xinnan-tech/xiaozhi-esp32-server/blob/main/docs/performance_tester.md) | 广东省广州市海珠区 | 2025年8月21日 17:23 | 中国联通 |
 
 #### 4.1.2 非流式测试结果
 | 模型名称 | 指标名称 | 指标值 |

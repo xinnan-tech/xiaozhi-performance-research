@@ -14,7 +14,7 @@
 |-------|--------|--------|-----|
 | ASR | FunASR (GPU模式) | 平均处理时间 | 0.071秒/次 |
 | LLM | qwen3-235b-a22b-instruct-2507 | 超长角色提示词下的首Token时间 | 1.026秒 |
-| TTS | PaddleSpeechTTS(本地部署) | 平均首音时间 | 0.092秒/次 |
+| TTS | PaddleSpeechStreamTTS(本地部署) | 平均首音时间 | 0.092秒/次 |
 
 ## 四、报告明细
 ### 4.1 语音识别(ASR)性能对比
@@ -82,7 +82,7 @@
 #### 4.3.3 流式测试结果
 | 模型名称 | 指标名称 | 指标值 |
 |--------|----------|-----|
-| PaddleSpeechTTS(本地部署) | 平均首音时间 | 0.092秒/次 |
+| PaddleSpeechStreamTTS(本地部署) | 平均首音时间 | 0.092秒/次 |
 | HuoshanDoubleStreamTTS-v3 | 平均首音时间 | 0.198秒/次 |
 | IndexStreamTTS | 平均首音时间 | 0.291秒/次 |
 | LinkeraiTTS | 平均首音时间 | 0.443秒/次 |

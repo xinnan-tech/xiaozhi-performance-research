@@ -13,8 +13,8 @@
 | 模块类型 | 推荐模型 | 关键指标 | 指标值 |
 |-------|--------|--------|-----|
 | ASR | FunASR (GPU模式) | 平均处理时间 | 0.071秒/次 |
-| LLM | qwen3-235b-a22b-instruct-2507 | 超长角色提示词下的首Token时间 | 1.062秒 |
-| TTS | HuoshanDoubleStreamTTS 或 AliyunStreamTTS | 首音时间 | 未出 |
+| LLM | qwen3-235b-a22b-instruct-2507 | 超长角色提示词下的首Token时间 | 1.026秒 |
+| TTS | PaddleSpeechTTS(本地部署) | 平均首音时间 | 0.092秒/次 |
 
 ## 四、报告明细
 ### 4.1 语音识别(ASR)性能对比
@@ -23,30 +23,71 @@
 | 测试方法 | 测试地点 | 测试时间 | 宽带运营商 |
 |-----|-----|-----|-----|
 | [点击查看](/ASR/A10显卡推理报告.md) | 广东省广州市海珠区 | 2025年8月1日 16:48 | 中国联通 |
+| [点击查看](https://github.com/xinnan-tech/xiaozhi-esp32-server/blob/main/docs/performance_tester.md) | 广东省广州市海珠区 | 2025年8月21日 17:23 | 中国移动 |
 
-#### 4.1.2 测试结果
+#### 4.1.2 非流式测试结果
 | 模型名称 | 指标名称 | 指标值 |
 |--------|----------|-----|
 | FunASR (本地GPU) | 平均处理时间 | 0.071秒/次 |
 | FunASR (本地CPU) | 平均处理时间 | 0.488秒/次 |
+
+| 模型名称 | 指标名称 | 指标值 |
+|--------|----------|-----|
+|TencentASR-2019-06-14version | 平均处理时间 | 0.525秒/次 |
+|BaiduASR-v1-short| 平均处理时间 | 0.657秒/次 |
+|AliyunASR| 平均处理时间 | 1.080秒/次 |
+|DoubaoASR-volcengine| 平均处理时间 | 1.856秒/次 |
+
+### 4.1.3 流式测试结果
+| 模型名称 | 指标名称 | 指标值 |
+|--------|----------|-----|
+|DoubaoStream-v3-asr| 平均首词等待时间 | 0.572秒/次 |
+
 
 ### 4.2 大语言模型(LLM)性能对比
 
 #### 4.2.1 测试方法
 | 测试方法 | 测试地点 | 测试时间 | 宽带运营商 |
 |-----|-----|-----|-----|
-| [点击查看](https://github.com/xinnan-tech/xiaozhi-esp32-server/blob/main/docs/performance_tester.md) | 广东省佛山市禅城区 | 2025年8月17日 10:48 | 中国移动 |
-
+| [点击查看](https://github.com/xinnan-tech/xiaozhi-esp32-server/blob/main/docs/performance_tester.md) | 广东省广州市海珠区 | 2025年8月21日 15:58 | 中国联通 |
 #### 4.2.2 测试结果
 | 模型名称 | 指标名称 | 指标值 |
 |--------|----------|-----|
-| qwen3-235b-a22b-instruct-2507 | 小智超长角色提示词下的首Token时间 | 1.062秒 |
-| doubao-1-5-pro-32k-250115 | 小智超长角色提示词下的首Token时间 | 1.575秒 |
-
+| qwen3-235b-a22b-instruct-2507 | 小智超长角色提示词下的首Token时间 | 1.026秒 |
+| doubao-1-5-pro-32k-250115 | 小智超长角色提示词下的首Token时间 | 1.775秒 |
+| glm-4-flash | 小智超长角色提示词下的首Token时间 | 3.006秒 |
+| deepseek-v3.1 | 小智超长角色提示词下的首Token时间 | 7.901秒 |
 
 ### 4.3 语音合成模型(TTS)性能对比
 
+#### 4.3.1 测试方法
+| 测试方法 | 测试地点 | 测试时间 | 宽带运营商 |
+|-----|-----|-----|-----|
+| [点击查看](https://github.com/xinnan-tech/xiaozhi-esp32-server/blob/main/docs/performance_tester.md) | 广东省广州市海珠区 | 2025年8月21日 15:35 | 中国联通 |
+
+#### 4.3.2 非流式测试结果
 | 模型名称 | 指标名称 | 指标值 |
 |--------|----------|-----|
-| HuoshanDoubleStreamTTS | 首音时间 | 未出 |
-| HuoshanDoubleStreamTTS 或 AliyunStreamTTS | 首音时间 | 未出 |
+| PaddleSpeechTTS(本地部署) | 平均处理时间 | 0.159秒/次 |
+| AliyunTTS-cn-shenzhen | 平均处理时间 | 0.218秒/次 |
+| DoubaoTTS-v1| 平均处理时间 | 0.267秒/次 |
+| CosyVoice2-0.5B | 平均处理时间 | 0.379秒/次 |
+| tencentcloud-tts | 平均处理时间 | 0.405秒/次 |
+| minimax-speech-01-turbo| 平均处理时间 | 0.562秒/次 |
+| EdgeTTS| 平均处理时间 | 0.653秒/次 |
+| Gizwits-doubao-VolcEngine-V1-tts | 平均处理时间 | 0.732秒/次 |
+| CozeCnTTS | 平均处理时间 | 0.774秒/次 |
+| 302ai-doubao-v1-tts | 平均处理时间 | 1.492秒/次 |
+
+
+### 4.3.3 流式测试结果
+| 模型名称 | 指标名称 | 指标值 |
+|--------|----------|-----|
+| PaddleSpeechTTS(本地部署) | 平均首音时间 | 0.092秒/次 |
+| HuoshanDoubleStreamTTS-v3 | 平均首音时间 | 0.198秒/次 |
+| IndexStreamTTS | 平均首音时间 | 0.291秒/次 |
+| LinkeraiTTS | 平均首音时间 | 0.443秒/次 |
+| AliyunStreamTTS | 平均首音时间 | 0.545秒/次 |
+
+
+

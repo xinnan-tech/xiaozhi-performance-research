@@ -13,7 +13,7 @@
 | 模块类型 | 推荐模型 | 关键指标 | 指标值 |
 |-------|--------|--------|-----|
 | ASR | FunASR (GPU模式) | 平均处理时间 | 0.071秒/次 |
-| LLM | qwen-plus-2025-04-28 | 超长角色提示词下的首Token时间 | 0.806秒 |
+| LLM | qwen-flash-2025-07-28 | 超长角色提示词下的首Token时间 | 0.531秒 |
 | TTS | PaddleSpeechStreamTTS(本地部署) | 平均首音时间 | 0.092秒/次 |
 
 ## 四、报告明细
@@ -23,7 +23,7 @@
 | 测试方法 | 测试地点 | 测试时间 | 宽带运营商 |
 |-----|-----|-----|-----|
 | [点击查看](/ASR/A10显卡推理报告.md) | 广东省广州市海珠区 | 2025年8月1日 16:48 | 中国联通 |
-| [点击查看](https://github.com/xinnan-tech/xiaozhi-esp32-server/blob/main/docs/performance_tester.md) | 广东省广州市海珠区 | 2025年8月21日 17:23 | 中国联通 |
+| [点击查看](https://github.com/xinnan-tech/xiaozhi-esp32-server/blob/main/docs/performance_tester.md) | 广东省广州市海珠区 | 2025年8月22日 11:03 | 中国联通 |
 
 #### 4.1.2 非流式测试结果
 | 模型名称 | 指标名称 | 指标值 |
@@ -35,33 +35,42 @@
 |--------|----------|-----|
 |Tencent-2019-06-14 | 平均处理时间 | 0.525秒/次 |
 |Baidu-short| 平均处理时间 | 0.657秒/次 |
-|Aliyun| 平均处理时间 | 1.080秒/次 |
+|paraformer-v2| 平均处理时间 | 0.822秒/次 |
+|Paraformer-v1| 平均处理时间 | 1.080秒/次 |
 |Doubao-volcengine| 平均处理时间 | 1.856秒/次 |
 
 #### 4.1.3 流式测试结果
 | 模型名称 | 指标名称 | 指标值 |
 |--------|----------|-----|
 | doubao-Speech_Recognition_Seed_streaming| 平均首词等待时间 | 0.563秒/次 |
+| paraformer-realtime-v1 | 平均首词等待时间 | 0.752/次 |
 
 ### 4.2 大语言模型(LLM)性能对比
 
 #### 4.2.1 测试方法
 | 测试方法 | 测试地点 | 测试时间 | 宽带运营商 |
 |-----|-----|-----|-----|
-| [点击查看](https://github.com/xinnan-tech/xiaozhi-esp32-server/blob/main/docs/performance_tester.md) | 广东省广州市海珠区 | 2025年8月22日 10:19 | 中国联通 |
+| [点击查看](https://github.com/xinnan-tech/xiaozhi-esp32-server/blob/main/docs/performance_tester.md) | 广东省广州市海珠区 | 2025年8月22日 10：46 | 中国联通 |
 #### 4.2.2 测试结果
 | 模型名称 | 指标名称 | 指标值 |
 |--------|----------|-----|
+| qwen-flash-2025-07-28 | 小智超长角色提示词下的首Token时间 | 0.531秒 |
+| llama-4-scout-17b-16e-instruct | 小智超长角色提示词下的首Token时间 | 0.536秒 |
+| Moonshot-Kimi-K2-Instruct | 小智超长角色提示词下的首Token时间 | 0.680秒 |
+| qwen2.5-Max | 小智超长角色提示词下的首Token时间 | 0.783秒 |
 | qwen-plus-2025-04-28| 小智超长角色提示词下的首Token时间 | 0.806秒 |
+| qwen-plus-latest | 小智超长角色提示词下的首Token时间 | 0.823秒 |
 | qwen-max-2024-09-19 | 小智超长角色提示词下的首Token时间 | 1.017秒 |
-| qwen3-235b-a22b-instruct-2507 | 小智超长角色提示词下的首Token时间 | 1.033秒 |
+| qwen-turbo-2025-07-15 | 小智超长角色提示词下的首Token时间 | 1.129秒 |
 | doubao-1-5-pro-32k-250115 | 小智超长角色提示词下的首Token时间 | 1.453秒 |
 | glm-4-flash | 小智超长角色提示词下的首Token时间 | 1.925秒 |
 | doubao-1.6-thingking-250715 | 小智超长角色提示词下的首Token时间 | 3.032秒 |
+| glm-4.5 | 小智超长角色提示词下的首Token时间 | 5.804秒 |
 | deepseek-chat | 小智超长角色提示词下的首Token时间 | 6.901秒 |
 | qwq-32b | 小智超长角色提示词下的首Token时间 | 7.096秒 |
 | qwen3-235b-a22b-thinking-2507 | 小智超长角色提示词下的首Token时间 | 9.100秒 |
 | deepseek-reasoner | 小智超长角色提示词下的首Token时间 | >10秒 |
+| deepseek-r1-0528 | 小智超长角色提示词下的首Token时间 | >10秒 |
 
 
 ### 4.3 语音合成模型(TTS)性能对比
@@ -75,7 +84,7 @@
 | 模型名称 | 指标名称 | 指标值 |
 |--------|----------|-----|
 | PaddleSpeechTTS(本地部署) | 平均处理时间 | 0.159秒/次 |
-| Aliyun | 平均处理时间 | 0.218秒/次 |
+| qwen-tts-2025-05-22 | 平均处理时间 | 0.218秒/次 |
 | Doubao| 平均处理时间 | 0.267秒/次 |
 | CosyVoice2-0.5B | 平均处理时间 | 0.379秒/次 |
 | tencentcloud-tts | 平均处理时间 | 0.405秒/次 |
@@ -89,10 +98,10 @@
 | 模型名称 | 指标名称 | 指标值 |
 |--------|----------|-----|
 | PaddleSpeechStreamTTS(本地部署) | 平均首音时间 | 0.092秒/次 |
-| HuoshanDoubleStreamTTS-v3 | 平均首音时间 | 0.198秒/次 |
-| IndexStreamTTS | 平均首音时间 | 0.291秒/次 |
-| LinkeraiTTS | 平均首音时间 | 0.443秒/次 |
-| AliyunStreamTTS | 平均首音时间 | 0.545秒/次 |
+| HuoshanDoubao-v3 | 平均首音时间 | 0.198秒/次 |
+| IndexStream | 平均首音时间 | 0.291秒/次 |
+| Linkerai | 平均首音时间 | 0.443秒/次 |
+| Aliyun-cosyvoice-v1 | 平均首音时间 | 0.545秒/次 |
 
 
 

@@ -43,7 +43,7 @@
 | 模型名称 | 指标名称 | 指标值 |
 |--------|----------|-----|
 | doubao-Speech_Recognition_Seed_streaming| 平均首词等待时间 | 0.563秒/次 |
-| paraformer-realtime-v1 | 平均首词等待时间 | 0.752/次 |
+| paraformer-realtime-v1 | 平均首词等待时间 | 0.752秒/次 |
 
 ### 4.2 大语言模型(LLM)性能对比
 

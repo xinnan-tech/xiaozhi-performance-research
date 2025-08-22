@@ -78,16 +78,18 @@
 #### 4.3.1 测试方法
 | 测试方法 | 测试地点 | 测试时间 | 宽带运营商 |
 |-----|-----|-----|-----|
-| [点击查看](https://github.com/xinnan-tech/xiaozhi-esp32-server/blob/main/docs/performance_tester.md) | 广东省广州市海珠区 | 2025年8月21日 15:35 | 中国联通 |
+| [点击查看](https://github.com/xinnan-tech/xiaozhi-esp32-server/blob/main/docs/performance_tester.md) | 广东省广州市海珠区 | 2025年8月22日 11:25 | 中国联通 |
 
 #### 4.3.2 非流式测试结果
 | 模型名称 | 指标名称 | 指标值 |
 |--------|----------|-----|
-| PaddleSpeechTTS(本地部署) | 平均处理时间 | 0.159秒/次 |
+| FunAudioLLM/SenseVoiceSmall | 平均处理时间 | 0.113秒/次 |
+| PaddleSpeechTTS(本地部署) | 平均处理时间 | 0.121秒/次 |
 | qwen-tts-2025-05-22 | 平均处理时间 | 0.218秒/次 |
 | Doubao| 平均处理时间 | 0.267秒/次 |
-| CosyVoice2-0.5B | 平均处理时间 | 0.379秒/次 |
+| FunAudioLLM/CosyVoice2-0.5B | 平均处理时间 | 0.379秒/次 |
 | tencentcloud-tts | 平均处理时间 | 0.405秒/次 |
+| fnlp/MOSS-TTSD-v0.5 | 平均处理时间 | 0.504秒/次 |
 | minimax-speech-01-turbo| 平均处理时间 | 0.562秒/次 |
 | EdgeTTS| 平均处理时间 | 0.653秒/次 |
 | Gizwits-doubao-VolcEngine-V1-tts | 平均处理时间 | 0.732秒/次 |

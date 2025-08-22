@@ -49,14 +49,21 @@
 #### 4.2.1 测试方法
 | 测试方法 | 测试地点 | 测试时间 | 宽带运营商 |
 |-----|-----|-----|-----|
-| [点击查看](https://github.com/xinnan-tech/xiaozhi-esp32-server/blob/main/docs/performance_tester.md) | 广东省广州市海珠区 | 2025年8月21日 15:58 | 中国联通 |
+| [点击查看](https://github.com/xinnan-tech/xiaozhi-esp32-server/blob/main/docs/performance_tester.md) | 广东省广州市海珠区 | 2025年8月22日 10:19 | 中国联通 |
 #### 4.2.2 测试结果
 | 模型名称 | 指标名称 | 指标值 |
 |--------|----------|-----|
-| qwen3-235b-a22b-instruct-2507 | 小智超长角色提示词下的首Token时间 | 1.026秒 |
-| doubao-1-5-pro-32k-250115 | 小智超长角色提示词下的首Token时间 | 1.775秒 |
-| glm-4-flash | 小智超长角色提示词下的首Token时间 | 3.006秒 |
-| deepseek-v3.1 | 小智超长角色提示词下的首Token时间 | 7.901秒 |
+| qwen-plus-2025-04-28| 小智超长角色提示词下的首Token时间 | 0.806秒 |
+| qwen-max-2024-09-19 | 小智超长角色提示词下的首Token时间 | 1.017秒 |
+| qwen3-235b-a22b-instruct-2507 | 小智超长角色提示词下的首Token时间 | 1.033秒 |
+| doubao-1-5-pro-32k-250115 | 小智超长角色提示词下的首Token时间 | 1.453秒 |
+| glm-4-flash | 小智超长角色提示词下的首Token时间 | 1.925秒 |
+| doubao-1.6-thingking-250715 | 小智超长角色提示词下的首Token时间 | 3.032秒 |
+| deepseek-chat | 小智超长角色提示词下的首Token时间 | 6.901秒 |
+| qwq-32b | 小智超长角色提示词下的首Token时间 | 7.096秒 |
+| qwen3-235b-a22b-thinking-2507 | 小智超长角色提示词下的首Token时间 | 9.100秒 |
+| deepseek-reasoner | 小智超长角色提示词下的首Token时间 | >10秒 |
+
 
 ### 4.3 语音合成模型(TTS)性能对比
 

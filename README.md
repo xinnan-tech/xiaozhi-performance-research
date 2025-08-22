@@ -75,14 +75,14 @@
 | 模型名称 | 指标名称 | 指标值 |
 |--------|----------|-----|
 | PaddleSpeechTTS(本地部署) | 平均处理时间 | 0.159秒/次 |
-| AliyunTTS-cn-shenzhen | 平均处理时间 | 0.218秒/次 |
-| DoubaoTTS-v1| 平均处理时间 | 0.267秒/次 |
+| Aliyun | 平均处理时间 | 0.218秒/次 |
+| Doubao| 平均处理时间 | 0.267秒/次 |
 | CosyVoice2-0.5B | 平均处理时间 | 0.379秒/次 |
 | tencentcloud-tts | 平均处理时间 | 0.405秒/次 |
 | minimax-speech-01-turbo| 平均处理时间 | 0.562秒/次 |
 | EdgeTTS| 平均处理时间 | 0.653秒/次 |
 | Gizwits-doubao-VolcEngine-V1-tts | 平均处理时间 | 0.732秒/次 |
-| CozeCnTTS | 平均处理时间 | 0.774秒/次 |
+| Coze | 平均处理时间 | 0.774秒/次 |
 | 302ai-doubao-v1-tts | 平均处理时间 | 1.492秒/次 |
 
 #### 4.3.3 流式测试结果

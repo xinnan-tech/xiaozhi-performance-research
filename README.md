@@ -24,7 +24,7 @@
 | 测试方法 | 测试地点 | 测试时间 | 宽带运营商 |
 |-----|-----|-----|-----|
 | [点击查看](/ASR/A10显卡推理报告.md) | 广东省广州市海珠区 | 2025年8月1日 16:48 | 中国联通 |
-| [点击查看](https://github.com/xinnan-tech/xiaozhi-esp32-server/blob/main/docs/performance_tester.md) | 广东省广州市海珠区 | 2025年9月11日 16：34 | 中国联通 |
+| [点击查看](https://github.com/xinnan-tech/xiaozhi-esp32-server/blob/main/docs/performance_tester.md) | 广东省广州市海珠区 | 2025年9月26日 11:07 | 中国联通 |
 
 #### 4.1.2 非流式测试结果
 | 模型名称 | 指标名称 | 指标值 |
@@ -43,6 +43,7 @@
 #### 4.1.3 流式测试结果
 | 模型名称 | 指标名称 | 指标值 |
 |--------|----------|-----|
+| xunfei-bmc | 平均首词等待时间 | 0.136秒/次 |
 | doubao-Speech_Recognition_Seed_streaming| 平均首词等待时间 | 0.499秒/次 |
 | Qwen-ASR-flash | 平均首词等待时间 | 0.730秒/次 |
 | paraformer-realtime-v1 | 平均首词等待时间 | 0.813秒/次 |
@@ -66,6 +67,8 @@
 | qwen-Max | 小智超长角色提示词下的首Token时间 | 1.340秒 |
 | qwen-plus-2025-07-28 | 小智超长角色提示词下的首Token时间 | 1.356秒 |
 | llama-4-scout-17b-16e-instruct | 小智超长角色提示词下的首Token时间 | 1.493秒 |
+| xunfei-spark-lite | 小智超长角色提示词下的首Token时间 | 1.517秒 |
+| xunfei-spark-pro | 小智超长角色提示词下的首Token时间 | 1.774秒 |
 | doubao-1-5-pro-32k-250115 | 小智超长角色提示词下的首Token时间 | 2.478秒 |
 | glm-4.5-airx | 小智超长角色提示词下的首Token时间 | 2.989秒 |
 | glm-4.5 | 小智超长角色提示词下的首Token时间 | 3.313秒 |
@@ -106,6 +109,7 @@
 |--------|----------|-----|
 | PaddleSpeechTTS(本地部署) | 平均首音时间 | 0.092秒/次 |
 | HuoshanDoubao-v3 | 平均首音时间 | 0.198秒/次 |
+| xunfei-uts | 平均首音时间 | 0.221秒/次 |
 | IndexStream | 平均首音时间 | 0.291秒/次 |
 | Linkerai | 平均首音时间 | 0.443秒/次 |
 | Aliyun-cosyvoice-v1 | 平均首音时间 | 0.545秒/次 |

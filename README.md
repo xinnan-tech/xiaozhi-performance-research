@@ -24,7 +24,7 @@
 | 测试方法 | 测试地点 | 测试时间 | 宽带运营商 |
 |-----|-----|-----|-----|
 | [点击查看](/ASR/A10显卡推理报告.md) | 广东省广州市海珠区 | 2025年8月1日 16:48 | 中国联通 |
-| [点击查看](https://github.com/xinnan-tech/xiaozhi-esp32-server/blob/main/docs/performance_tester.md) | 广东省广州市海珠区 | 2025年9月26日 11:07 | 中国联通 |
+| [点击查看](https://github.com/xinnan-tech/xiaozhi-esp32-server/blob/main/docs/performance_tester.md) | 广东省广州市海珠区 | 2025年9月30日 9:39 | 中国联通 |
 
 #### 4.1.2 非流式测试结果
 | 模型名称 | 指标名称 | 指标值 |
@@ -34,19 +34,17 @@
 
 | 模型名称 | 指标名称 | 指标值 |
 |--------|----------|-----|
-|Tencent-2019-06-14 | 平均处理时间 | 0.525秒/次 |
-|Baidu| 平均处理时间 | 0.657秒/次 |
-|paraformer-v2（阿里云）| 平均处理时间 | 0.822秒/次 |
-|Paraformer-v1（阿里云）| 平均处理时间 | 1.080秒/次 |
-|Doubao-volcengine| 平均处理时间 | 1.856秒/次 |
+|TencentASR | 平均处理时间 | 0.345秒/次 |
+|BaiduASR| 平均处理时间 | 0.867秒/次 |
+|AliyunASR| 平均处理时间 | 0.885秒/次 |
+|DoubaoASR| 平均处理时间 | 1.088秒/次 |
 
 #### 4.1.3 流式测试结果
 | 模型名称 | 指标名称 | 指标值 |
 |--------|----------|-----|
-| xunfei-bmc | 平均首词等待时间 | 0.136秒/次 |
-| doubao-Speech_Recognition_Seed_streaming| 平均首词等待时间 | 0.499秒/次 |
-| Qwen-ASR-flash | 平均首词等待时间 | 0.730秒/次 |
-| paraformer-realtime-v1 | 平均首词等待时间 | 0.813秒/次 |
+| XunfeiStreamASR | 平均首词等待时间 | 0.329秒/次 |
+| DoubaoStreamASR| 平均首词等待时间 | 0.566秒/次 |
+| Qwen3ASRFlash | 平均首词等待时间 | 0.951秒/次 |
 
 ### 4.2 大语言模型(LLM)响应速度对比
 
@@ -81,38 +79,47 @@
 | deepseek-reasoner | 小智超长角色提示词下的首Token时间 | >10秒 |
 | deepseek-r1-0528 | 小智超长角色提示词下的首Token时间 | >10秒 |
 
+### 4.3 在云服务平台示例容器vllm搭建模型测试结果
+
+#### 4.3.1 测试方法
+| 测试方法 | 部署方法 | 测试地点 | 测试时间 | 宽带运营商 |
+|-----|-----|-----|-----|
+| [点击查看](https://github.com/xinnan-tech/xiaozhi-esp32-server/blob/main/docs/performance_tester.md) |[点击查看](vLLM_Qwen2.5-72B-Instruct.md)| 广东省广州市海珠区 | 2025年9月30日 10:11 | 中国联通 |
+
+#### 4.3.2 测试结果
+| 模型名称 | 部署设备 | 指标名称 | 指标值 |
+|--------|----------|-----|
+| qwen2.5-72b-instruct | 4张A800显卡 | 小智超长角色提示词下的首Token时间 | 0.601秒 |
 
 ### 4.3 语音合成模型(TTS)响应速度对比
 
 #### 4.3.1 测试方法
 | 测试方法 | 测试地点 | 测试时间 | 宽带运营商 |
 |-----|-----|-----|-----|
-| [点击查看](https://github.com/xinnan-tech/xiaozhi-esp32-server/blob/main/docs/performance_tester.md) | 广东省广州市海珠区 | 2025年8月22日 11:25 | 中国联通 |
+| [点击查看](https://github.com/xinnan-tech/xiaozhi-esp32-server/blob/main/docs/performance_tester.md) | 广东省广州市海珠区 | 2025年9月30日 10:33 | 中国联通 |
 
 #### 4.3.2 非流式测试结果
 | 模型名称 | 指标名称 | 指标值 |
 |--------|----------|-----|
-| FunAudioLLM/SenseVoiceSmall（硅基流动） | 平均处理时间 | 0.113秒/次 |
-| qwen-tts-2025-05-22 | 平均处理时间 | 0.218秒/次 |
-| Doubao| 平均处理时间 | 0.267秒/次 |
-| FunAudioLLM/CosyVoice2-0.5B（硅基流动） | 平均处理时间 | 0.379秒/次 |
-| tencentcloud-tts | 平均处理时间 | 0.405秒/次 |
-| fnlp/MOSS-TTSD-v0.5 | 平均处理时间 | 0.504秒/次 |
-| minimax-speech-01-turbo| 平均处理时间 | 0.562秒/次 |
-| Edge| 平均处理时间 | 0.653秒/次 |
-| Gizwits-doubao-VolcEngine-V1-tts | 平均处理时间 | 0.732秒/次 |
-| Coze | 平均处理时间 | 0.774秒/次 |
-| 302ai-doubao | 平均处理时间 | 1.492秒/次 |
+| CosyVoiceSiliconflow-Small| 平均处理时间 | 0.103秒/次 |
+| AliyunTTS | 平均处理时间 | 0.322秒/次 |
+| DoubaoTTS| 平均处理时间 | 0.327秒/次 |
+| TencentTTS | 平均处理时间 | 0.365秒/次 |
+| CosyVoiceSiliconflow） | 平均处理时间 | 0.488秒/次 |
+| MinimaxTTSHTTPStream| 平均处理时间 | 0.662秒/次 |
+| EdgeTTS| 平均处理时间 | 0.667秒/次 |
+| CozeCnTTS | 平均处理时间 | 0.751秒/次 |
+| TTS302AI | 平均处理时间 | 1.785秒/次 |
 
 #### 4.3.3 流式测试结果
 | 模型名称 | 指标名称 | 指标值 |
 |--------|----------|-----|
-| PaddleSpeechTTS(本地部署) | 平均首音时间 | 0.092秒/次 |
-| HuoshanDoubao-v3 | 平均首音时间 | 0.198秒/次 |
-| xunfei-uts | 平均首音时间 | 0.221秒/次 |
-| IndexStream | 平均首音时间 | 0.291秒/次 |
-| Linkerai | 平均首音时间 | 0.443秒/次 |
-| Aliyun-cosyvoice-v1 | 平均首音时间 | 0.545秒/次 |
+| PaddleSpeechTTS(本地部署) | 平均首音时间 | 0.103秒/次 |
+| XunFeiTTS | 平均首音时间 | 0.253秒/次 |
+| IndexStream | 平均首音时间 | 0.312秒/次 |
+| HuoshanDoubleStreamTTS | 平均首音时间 | 0.317秒/次 |
+| Linkerai | 平均首音时间 | 0.455秒/次 |
+| AliyunStreamTTS | 平均首音时间 | 0.712秒/次 |
 
 ### 4.4 视觉分析模型(Vllm)响应速度对比
 

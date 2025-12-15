@@ -23,28 +23,23 @@
 #### 4.1.1 测试方法
 | 测试方法 | 测试地点 | 测试时间 | 宽带运营商 |
 |-----|-----|-----|-----|
-| [点击查看](/ASR/A10显卡推理报告.md) | 广东省广州市海珠区 | 2025年8月1日 16:48 | 中国联通 |
-| [点击查看](https://github.com/xinnan-tech/xiaozhi-esp32-server/blob/main/docs/performance_tester.md) | 广东省广州市海珠区 | 2025年9月30日 9:39 | 中国联通 |
+| [点击查看](https://github.com/xinnan-tech/xiaozhi-esp32-server/blob/main/docs/performance_tester.md) | 广东省广州市海珠区 | 2025年12月15日 14:18 | 中国联通 |
 
 #### 4.1.2 非流式测试结果
 | 模型名称 | 指标名称 | 指标值 |
-|--------|----------|-----|
-| FunASR (本地GPU) | 平均处理时间 | 0.071秒/次 |
-| FunASR (本地CPU) | 平均处理时间 | 0.488秒/次 |
-
-| 模型名称 | 指标名称 | 指标值 |
-|--------|----------|-----|
-|TencentASR | 平均处理时间 | 0.345秒/次 |
-|BaiduASR| 平均处理时间 | 0.867秒/次 |
-|AliyunASR| 平均处理时间 | 0.885秒/次 |
-|DoubaoASR| 平均处理时间 | 1.088秒/次 |
+|TencentASR | 平均处理时间 | 0.340秒/次 |
+|BaiduASR| 平均处理时间 | 0.712秒/次 |
+|DoubaoASR| 平均处理时间 | 0.737秒/次 |
+|FunASRServer | 平均处理时间 | 0.752秒/次 |
+|AliyunASR| 平均处理时间 | 0.813秒/次 |
+|Qwen3ASRFlash| 平均处理时间 | 1.213秒/次 |
 
 #### 4.1.3 流式测试结果
 | 模型名称 | 指标名称 | 指标值 |
 |--------|----------|-----|
-| XunfeiStreamASR | 平均首词等待时间 | 0.329秒/次 |
-| DoubaoStreamASR| 平均首词等待时间 | 0.566秒/次 |
-| Qwen3ASRFlash | 平均首词等待时间 | 0.951秒/次 |
+| XunfeiStreamASR | 平均首词等待时间 | 0.649秒/次 |
+| DoubaoStreamASR| 平均首词等待时间 | 0.699秒/次 |
+| AliyunStreamASR | 平均首词等待时间 | 0.778秒/次 |
 
 ### 4.2 大语言模型(LLM)响应速度对比
 

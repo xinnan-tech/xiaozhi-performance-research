@@ -47,34 +47,16 @@
 #### 4.2.1 测试方法
 | 测试方法 | 测试地点 | 测试时间 | 宽带运营商 |
 |-----|-----|-----|-----|
-| [点击查看](https://github.com/xinnan-tech/xiaozhi-esp32-server/blob/main/docs/performance_tester.md) | 广东省广州市海珠区 | 2025年8月25日 10：39 | 中国联通 |
+| [点击查看](https://github.com/xinnan-tech/xiaozhi-esp32-server/blob/main/docs/performance_tester.md) | 广东省广州市海珠区 | 2025年4月15日 15:20 | 中国联通 |
 #### 4.2.2 测试结果
 | 模型名称 | 指标名称 | 指标值 |
 |--------|----------|-----|
-| qwen-flash-2025-07-28 | 小智超长角色提示词下的首Token时间 | 0.675秒 |
-| qwen-turbo-2025-07-15 | 小智超长角色提示词下的首Token时间 | 0.747秒 |
-| glm-4-flash | 小智超长角色提示词下的首Token时间 | 1.076秒 |
-| qwen3-235b-a22b-instruct-2507 | 小智超长角色提示词下的首Token时间 | 1.103秒 |
-| glm-4-plus | 小智超长角色提示词下的首Token时间 | 1.195秒 |
-| qwen-plus-latest | 小智超长角色提示词下的首Token时间 | 1.245秒 |
-| Moonshot-Kimi-K2-Instruct | 小智超长角色提示词下的首Token时间 | 1.288秒 |
-| qwen-Max | 小智超长角色提示词下的首Token时间 | 1.340秒 |
-| qwen-plus-2025-07-28 | 小智超长角色提示词下的首Token时间 | 1.356秒 |
-| llama-4-scout-17b-16e-instruct | 小智超长角色提示词下的首Token时间 | 1.493秒 |
-| xunfei-spark-lite | 小智超长角色提示词下的首Token时间 | 1.517秒 |
-| xunfei-spark-pro | 小智超长角色提示词下的首Token时间 | 1.774秒 |
-| doubao-1-5-pro-32k-250115 | 小智超长角色提示词下的首Token时间 | 2.478秒 |
-| glm-4.5-airx | 小智超长角色提示词下的首Token时间 | 2.989秒 |
-| glm-4.5 | 小智超长角色提示词下的首Token时间 | 3.313秒 |
-| glm-4.5-air | 小智超长角色提示词下的首Token时间 | 3.962秒 |
-| doubao-seed-1-6-flash-250715 | 小智超长角色提示词下的首Token时间 | 6.490秒 |
-| deepseek-chat | 小智超长角色提示词下的首Token时间 | 6.901秒 |
-| qwq-32b | 小智超长角色提示词下的首Token时间 | 7.096秒 |
-| qwen3-235b-a22b-thinking-2507 | 小智超长角色提示词下的首Token时间 | 9.100秒 |
-| doubao-1.6-thingking-250715 | 小智超长角色提示词下的首Token时间 | 9.623秒 |
-| deepseek-reasoner | 小智超长角色提示词下的首Token时间 | >10秒 |
-| deepseek-r1-0528 | 小智超长角色提示词下的首Token时间 | >10秒 |
-
+| qwen-flash-2025-07-28 | 小智超长角色提示词下的首Token时间 | 0.495秒 |
+| qwen3-max | 小智超长角色提示词下的首Token时间 | 0.648秒 |
+| qwen3-max-2026-01-23 | 小智超长角色提示词下的首Token时间 | 0.669秒 |
+| qwen-plus-2025-12-01 | 小智超长角色提示词下的首Token时间 | 0.674秒 |
+|glm-4-flash | 小智超长角色提示词下的首Token时间 | 0.971秒 |
+| kimi-k2.5 | 小智超长角色提示词下的首Token时间 | 1.025秒 |
 ### 4.3 在云服务平台示例容器vllm搭建模型测试结果
 
 #### 4.3.1 测试方法

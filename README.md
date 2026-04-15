@@ -47,7 +47,7 @@
 #### 4.2.1 测试方法
 | 测试方法 | 测试地点 | 测试时间 | 宽带运营商 |
 |-----|-----|-----|-----|
-| [点击查看](https://github.com/xinnan-tech/xiaozhi-esp32-server/blob/main/docs/performance_tester.md) | 广东省广州市海珠区 | 2025年4月15日 15:20 | 中国联通 |
+| [点击查看](https://github.com/xinnan-tech/xiaozhi-esp32-server/blob/main/docs/performance_tester.md) | 广东省广州市海珠区 | 2026年4月15日 15:20 | 中国联通 |
 #### 4.2.2 测试结果
 | 模型名称 | 指标名称 | 指标值 |
 |--------|----------|-----|

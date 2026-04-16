@@ -47,16 +47,22 @@
 #### 4.2.1 测试方法
 | 测试方法 | 测试地点 | 测试时间 | 宽带运营商 |
 |-----|-----|-----|-----|
-| [点击查看](https://github.com/xinnan-tech/xiaozhi-esp32-server/blob/main/docs/performance_tester.md) | 广东省广州市海珠区 | 2026年4月15日 15:20 | 中国联通 |
+| [点击查看](https://github.com/xinnan-tech/xiaozhi-esp32-server/blob/main/docs/performance_tester.md) | 广东省广州市海珠区 | 2026年4月16日 9:53 | 中国联通 |
 #### 4.2.2 测试结果
 | 模型名称 | 指标名称 | 指标值 |
 |--------|----------|-----|
-| qwen-flash-2025-07-28 | 小智超长角色提示词下的首Token时间 | 0.495秒 |
-| qwen3-max | 小智超长角色提示词下的首Token时间 | 0.648秒 |
-| qwen3-max-2026-01-23 | 小智超长角色提示词下的首Token时间 | 0.669秒 |
-| qwen-plus-2025-12-01 | 小智超长角色提示词下的首Token时间 | 0.674秒 |
-|glm-4-flash | 小智超长角色提示词下的首Token时间 | 0.971秒 |
-| kimi-k2.5 | 小智超长角色提示词下的首Token时间 | 1.025秒 |
+| qwen-flash-2025-07-28 | 小智超长角色提示词下的首Token时间 | 0.511秒 |
+| qwen-plus-2025-12-01 | 小智超长角色提示词下的首Token时间 | 0.701秒 |
+| glm-4-flash | 小智超长角色提示词下的首Token时间 | 0.722秒 |
+| qwen3-max | 小智超长角色提示词下的首Token时间 | 0.767秒 |
+| Moonshot-Kimi-K2-Instruct | 小智超长角色提示词下的首Token时间 | 0.784秒 |
+| qwen3-max-2026-01-23 | 小智超长角色提示词下的首Token时间 | 0.821秒 |
+| kimi-k2.5 | 小智超长角色提示词下的首Token时间 | 1.301秒 |
+| glm-5 | 小智超长角色提示词下的首Token时间 | 3.383秒 |
+| MiniMax-M2.7 | 小智超长角色提示词下的首Token时间 | 6.001秒 |
+| glm-5.1 | 小智超长角色提示词下的首Token时间 | 8.352秒 |
+| doubao-seed-2-0-pro-260215 | 小智超长角色提示词下的首Token时间 | 8.818秒 |
+| qwen3.6-plus-2026-04-02 | 小智超长角色提示词下的首Token时间 | >10秒 |
 ### 4.3 在云服务平台示例容器vllm搭建模型测试结果
 
 #### 4.3.1 测试方法
@@ -104,16 +110,18 @@
 #### 4.4.1 测试方法
 | 测试方法 | 测试地点 | 测试时间 | 宽带运营商 |
 |-----|-----|-----|-----|
-| [点击查看](https://github.com/xinnan-tech/xiaozhi-esp32-server/blob/main/docs/performance_tester.md) | 广东省广州市海珠区 | 2025年8月25日 11:10 | 中国联通 |
+| [点击查看](https://github.com/xinnan-tech/xiaozhi-esp32-server/blob/main/docs/performance_tester.md) | 广东省广州市海珠区 | 2026年4月16日 10:26 | 中国联通 |
 
 #### 4.4.2 测试结果
 | 模型名称 | 指标名称 | 指标值 |
 |--------|----------|-----|
-| qwen2.5-vl-3b-instruct  |平均响应时间 |    1.774秒/次 |
-| glm-4v-flash            |平均响应时间 |    2.278秒/次 |
-| GLM-4V-Plus-0111        |平均响应时间 |    4.397秒/次 |
-| GLM-4.5V                |平均响应时间 |    6.193秒/次 |
-| qwen-vl-max-2025-08-13  |平均响应时间 |    8.089秒/次 |
-| qwen-vl-plus-2025-08-15 |平均响应时间 |    9.343秒/次 |
+| glm-4v-flash  |平均响应时间 | 2.750秒 |
+| qwen3-vl-flash-2025-10-15 |平均响应时间 | 4.511秒 |
+| qwen3.5-35b-a3b |平均响应时间 | 6.768秒 |
+| qwen3-vl-flash-2026-01-22 |平均响应时间 | 7.265秒 |
+| glm-5v-turbo  |平均响应时间 | 7.876秒 |
+| kimi-k2.5  |平均响应时间 | 9.306秒 |
+| qwen3-vl-plus-2025-09-23 |平均响应时间 | 13.808秒 |
+| qwen3-vl-plus-2025-12-19  |平均响应时间 | 14.273秒 |
 
 

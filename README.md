@@ -29,7 +29,7 @@
 
 | 测试方法                                                                                             | 测试地点      | 测试时间             | 宽带运营商 |
 | ------------------------------------------------------------------------------------------------ | --------- | ---------------- | ----- |
-| [点击查看](https://github.com/xinnan-tech/xiaozhi-esp32-server/blob/main/docs/performance_tester.md) | 广东省广州市海珠区 | 2026年4月22日 11:16 | 中国联通  |
+| [点击查看](https://github.com/xinnan-tech/xiaozhi-esp32-server/blob/main/docs/performance_tester.md) | 广东省广州市海珠区 | 2026年4月22日 14:01 | 中国联通  |
 
 #### 4.1.2 非流式测试结果
 
@@ -39,16 +39,16 @@
 | BaiduASR      | 平均处理时间 | 0.923秒/次 |
 | DoubaoASR     | 平均处理时间 | 1.071秒/次 |
 | AliyunASR     | 平均处理时间 | 1.114秒/次 |
-| Qwen3ASRFlash | 平均处理时间 | 1.221秒/次 |
 
 #### 4.1.3 流式测试结果
 
 | 模型名称              | 指标名称     | 指标值      |
 | ----------------- | -------- | -------- |
-| XunfeiStreamASR   | 平均首词等待时间 | 0.723秒/次 |
-| DoubaoStreamASR   | 平均首词等待时间 | 0.738秒/次 |
-| AliyunStreamASR   | 平均首词等待时间 | 0.956秒/次 |
-| AliyunBLStreamASR | 平均首词等待时间 | 1.037秒/次 |
+| XunfeiStreamASR   | 平均首词等待时间 | 0.795秒/次 |
+| DoubaoStreamASRV1   | 平均首词等待时间 | 0.852秒/次 |
+| DoubaoStreamASRV2   | 平均首词等待时间 | 0.864秒/次 |
+| AliyunStreamASR   | 平均首词等待时间 | 0.984秒/次 |
+| Qwen3ASRFlash | 平均首词等待时间 | 1.023秒/次 |
 
 ### 4.2 大语言模型(LLM)响应速度对比
 
